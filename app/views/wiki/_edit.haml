@@ -1,0 +1,6 @@
+- form_tag "/wiki/#{page.name}" do
+  = text_area_tag :content, page.content, :size => "80x30"
+  %br
+  = submit_tag :Update
+  = link_to_remote :Cancel, :url => {:controller => :wiki, :action => page.name}, :update => :main_wiki_box
+
