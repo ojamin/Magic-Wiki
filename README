@@ -15,5 +15,23 @@ Todo list includes:
 Requires:
  - Haml
 
+=========
+
+To Use:
+ - install via git as a plugin
+ - run the migration scripts (easiest way is using my easy_migrate plugin)
+ - make a before filter that sets @magic_wiki_editable to true when you want a user to be able to edit a page
+ - browse to yourapp.com/wiki/WikiPageName
+
+To embed in existing pages:
+ - put "include MagicWiki" in your controller file
+then in your page def put:
+ - magic_wiki_do_setup "WikiPageName"
+ - @wiki = magic_wiki_display
+then in your view put either:
+ - "= @wiki" for haml users
+ - "<%= @wiki %>" for erb users
+
+
 
 Sponsored by Ebotech Consulting Ltd. - www.ebotech.com
