@@ -1,13 +1,16 @@
 MagicWiki
 =========
 
-Introduction goes here.
+Designed to make static page generation and editing a joy rather than a pain.
 
+Features include:
+ - Wiki style code interpretation
+ - Dynamic page creation
+ - Easy linking and embedding facilities
+ - In-place editing
 
-Example
-=======
+Todo list includes:
+ - User auth
 
-Example goes here.
-
-
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
+Requires:
+ - Haml
