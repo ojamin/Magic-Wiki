@@ -8,6 +8,7 @@ class WikiController < ApplicationController
       begin
         if @magic_wiki_editable
           @page.content = params[:content]
+          @page.generated = nil
           @page.save
         end
       rescue
