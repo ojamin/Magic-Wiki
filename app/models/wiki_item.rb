@@ -28,7 +28,7 @@ class WikiItem < ActiveRecord::Base
     return @@wiki_switches
   end
 
-  @@ref_page = <<eof
+  @@ref_page <<eof
 h1. Header 1
 h2. Header 2
 h3. Header 3
