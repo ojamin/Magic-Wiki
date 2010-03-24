@@ -19,7 +19,7 @@ module MagicWiki
 
   def magic_wiki_do_setup(name)
     render :text => "" and return unless name.size > 0
-    @page = WikiItem.find_by_name(name) || WikiItem.new(:name => name, :content => "")
+    @page = WikiItem.get_standard_page(name) || WikiItem.find_by_name(name) || WikiItem.new(:name => name, :content => "")
   end
 
   def magic_wiki_display

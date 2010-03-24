@@ -28,4 +28,46 @@ class WikiItem < ActiveRecord::Base
     return @@wiki_switches
   end
 
+  @@ref_page <<eof
+h1. Header 1
+h2. Header 2
+h3. Header 3
+
+{
+* List item 1
+* List item 2
+* List item 3
+}
+
+[
+* Numbered 1
+* Numbered 2
+* Numbered 3
+]
+
+h3. Styling
+'''Bold Text'''
+
+''Italic Text''
+
+'''''Both bold and italic'''''
+
+
+h3. Links
+[[Link to another wiki page]]
+
+[Link to google|http://google.com]
+
+
+h1. OMG Awesome ideas!
+youtube. J8nuiCoYfk0
+eof
+
+  def self.get_standard_page(name)
+    if name.downcase == "ref"
+      return WikiItem.new(:name => "Ref", :content => @@ref_page)
+    end
+    return nil
+  end
+
 end
