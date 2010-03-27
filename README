@@ -32,6 +32,11 @@ then in your view put either:
  - "= @wiki" for haml users
  - "<%= @wiki %>" for erb users
 
+=========
+
+Notes:
+ - go to wiki/Ref for a reference to the wiki syntax
+
 
 
 Sponsored by Ebotech Consulting Ltd. - www.ebotech.com
