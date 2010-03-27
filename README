@@ -20,23 +20,29 @@ Requires:
 To Use:
  - install via git as a plugin
  - run the migration scripts (easiest way is using my easy_migrate plugin)
- - make a before filter that sets @magic_wiki_editable to true when you want a user to be able to edit a page
  - browse to yourapp.com/wiki/WikiPageName
 
+To Edit:
+ - make a before filter that sets @magic_wiki_editable to true when you want a user to be able to edit a page
+ - browse to a page and click the edit button
+
+
 To embed in existing pages:
- - put "include MagicWiki" in your controller file
-then in your page def put:
- - magic_wiki_do_setup "WikiPageName"
- - @wiki = magic_wiki_display
-then in your view put either:
- - "= @wiki" for haml users
- - "<%= @wiki %>" for erb users
+ - in your controller:
+ - * include MagicWiki
+ - * magic_wiki_do_setup "WikiPageName"
+ - * @wiki = magic_wiki_display
+ - in your view put either:
+ - * "= @wiki" for haml users
+ - * "<%= @wiki %>" for erb users
 
 =========
 
 Notes:
  - go to wiki/Ref for a reference to the wiki syntax
 
+Options:
+ - set @magic_wiki_allow_html when saving pages to allow html to be saved
 
 
 Sponsored by Ebotech Consulting Ltd. - www.ebotech.com
