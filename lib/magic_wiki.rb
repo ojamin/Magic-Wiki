@@ -45,7 +45,7 @@ module MagicWiki
     @text = @text_start.join("\n") + @text
     @text.html_safe!
     outp = render_to_string(:partial => "wiki/view", :locals => {:page => @page, :text => @text}, :type => :haml)
-    return '<div id="main_wiki_box">' + outp + '</div>'
+    return ('<div id="main_wiki_box">' + outp + '</div>').html_safe!
   end
 
 end
